@@ -104,7 +104,7 @@ Contributions, suggestions, and feedback are welcome.
 
 ## Author
 Lakshay Kaushik  
-GitHub: https://github.com/your-username
+GitHub: https://github.com/lakshaykaushik1
 
 ---
 
