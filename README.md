@@ -1,18 +1,24 @@
 # Django Feature Flags Prototype
 
-## Overview
-This project is a prototype implementation of a Feature Flag System for Django. It is designed to enable controlled activation and deactivation of experimental features within a Django application, allowing safer testing, gradual rollouts, and improved development flexibility.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Django](https://img.shields.io/badge/Django-Framework-green)
+![GSoC](https://img.shields.io/badge/GSoC-2026-orange)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-The goal of this project is to explore how a native feature flag system can be integrated into Django to support scalable and maintainable feature experimentation.
+## Overview
+This project is a prototype implementation of a Feature Flag System for Django. It enables controlled activation and deactivation of experimental features, allowing safer testing, gradual rollouts, and improved development flexibility.
+
+The goal is to explore how a native feature flag system can be integrated into Django to support scalable and maintainable feature experimentation.
 
 ---
 
 ## Features
 - Centralized feature flag registry  
-- Enable/disable features dynamically  
+- Dynamic enable/disable functionality  
 - Django settings integration  
-- Simple runtime API for checking flags  
-- Extendable for user-based or environment-based flags  
+- Lightweight runtime API  
+- Middleware support for request-based toggling  
+- Extendable for user-based and environment-based flags  
 
 ---
 
@@ -42,7 +48,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-### 1. Define Feature Flags
+### Define Feature Flags
 ```python
 FEATURE_FLAGS = {
     "new_dashboard": True,
@@ -52,7 +58,7 @@ FEATURE_FLAGS = {
 
 ---
 
-### 2. Use in Code
+### Use in Code
 ```python
 from feature_flags.utils import is_enabled
 
@@ -60,13 +66,13 @@ if is_enabled("new_dashboard"):
     # New feature logic
     pass
 else:
-    # Old feature logic
+    # Fallback logic
     pass
 ```
 
 ---
 
-### 3. Middleware (Optional)
+### Middleware Setup (Optional)
 ```python
 MIDDLEWARE = [
     "feature_flags.middleware.FeatureFlagMiddleware",
@@ -76,21 +82,21 @@ MIDDLEWARE = [
 ---
 
 ## Future Improvements
-- Django Admin integration for UI-based control  
+- Django Admin interface for real-time flag control  
 - Database-backed feature flags  
 - User/group-based targeting  
 - A/B testing support  
-- Performance optimization  
+- Performance optimizations  
 
 ---
 
 ## Tech Stack
-Python, Django, Django ORM, Middleware, SQLite/PostgreSQL, Git
+Python, Django, Django ORM, Middleware, SQLite/PostgreSQL, Git, GitHub
 
 ---
 
 ## Contribution
-This project is currently a prototype developed as part of preparation for Google Summer of Code (GSoC) with Django Software Foundation.
+This project is developed as part of preparation for Google Summer of Code (GSoC) with the Django Software Foundation.
 
 Contributions, suggestions, and feedback are welcome.
 
@@ -98,7 +104,7 @@ Contributions, suggestions, and feedback are welcome.
 
 ## Author
 Lakshay Kaushik  
-GitHub: https://github.com/lakshaykaushik1
+GitHub: https://github.com/your-username
 
 ---
 
